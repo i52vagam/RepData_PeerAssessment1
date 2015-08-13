@@ -184,7 +184,6 @@ TSFillMedian &lt;- median(TotalStepsByDayFilled$totalSteps)</code></pre>
 <p>We need to change the system local time to show the days of the week using english language if we are in a not english speaking country</p>
 <pre class="r"><code>lct &lt;- Sys.getlocale(&quot;LC_TIME&quot;)
 Sys.setlocale(&quot;LC_TIME&quot;, &quot;C&quot;)</code></pre>
-<pre><code>## [1] &quot;C&quot;</code></pre>
 <p>Now we are going to assign the values (weekend or weekday) and calculate the mean again</p>
 <pre class="r"><code>activityFilled$weekDay &lt;- factor(ifelse(weekdays(activityFilled$date) %in% c(&quot;Saturday&quot;,&quot;Sunday&quot;),&quot;weekend&quot;,&quot;weekday&quot;))
 
@@ -194,8 +193,6 @@ AverageStepsByIntervalWeekday &lt;-
         summarize(averageSteps = mean(steps))</code></pre>
 <p>We reset the system local time again to its origin value</p>
 <pre class="r"><code>Sys.setlocale(&quot;LC_TIME&quot;, lct)</code></pre>
-<pre><code>## [1] &quot;es_ES.UTF-8&quot;</code></pre>
-<pre class="r"><code>remove(lct)</code></pre>
 </div>
 <div id="make-a-panel-plot-containing-a-time-series-plot-i.e.type-l-of-the-5-minute-interval-x-axis-and-the-average-number-of-steps-taken-averaged-across-all-weekday-days-or-weekend-days-y-axis.-see-the-readme-file-in-the-github-repository-to-see-an-example-of-what-this-plot-should-look-like-using-simulated-data." class="section level4">
 <h4>2. Make a panel plot containing a time series plot (i.e. type = “l”) of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.</h4>

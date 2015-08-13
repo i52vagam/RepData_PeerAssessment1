@@ -185,7 +185,7 @@ The Mean doesn't change because we are inserting this value. The Median has expe
 #### 1. Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
 
 We need to change the system local time to show the days of the week using english language if we are in a not english speaking country
-```{r}
+```{r,message=FALSE,warning=FALSE,results='hide'}
 lct <- Sys.getlocale("LC_TIME")
 Sys.setlocale("LC_TIME", "C")
 ```
@@ -203,7 +203,7 @@ AverageStepsByIntervalWeekday <-
 
 
 We reset the system local time again to its origin value
-```{r}
+```{r,message=FALSE,warning=FALSE,results='hide'}
 Sys.setlocale("LC_TIME", lct)
 ```
 

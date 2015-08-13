@@ -205,10 +205,6 @@ lct <- Sys.getlocale("LC_TIME")
 Sys.setlocale("LC_TIME", "C")
 ```
 
-```
-## [1] "C"
-```
-
 Now we are going to assign the values (weekend or weekday) and calculate the mean again
 
 
@@ -226,14 +222,6 @@ We reset the system local time again to its origin value
 
 ```r
 Sys.setlocale("LC_TIME", lct)
-```
-
-```
-## [1] "es_ES.UTF-8"
-```
-
-```r
-remove(lct)
 ```
 
 
