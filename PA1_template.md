@@ -106,7 +106,7 @@ Drawing the plot
 ggplot(AverageStepsByInterval,aes(x=interval,y=averageSteps)) +
   geom_line() +
   ggtitle("Average steps by interval") +
-  xlab("Intervals") +
+  xlab("Interval") +
   ylab("Average steps")
 ```
 
